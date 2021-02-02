@@ -4,13 +4,13 @@
 
 # Compiler settings - Can be customized.
 CC = g++
-CXXFLAGS = -std=c++11 -Wall
+CXXFLAGS = -std=c++17 -Wall
 LDFLAGS = 
 
 # Makefile settings - Can be customized.
-APPNAME = sparse
+APPNAME = sparsesolver
 EXT = .cpp
-SRCDIR = /Users/stoic/Documents/c++
+SRCDIR = /Users/stoic/Documents/sparse
 OBJDIR = obj
 
 ############## Do not change anything from here downwards! #############
