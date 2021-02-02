@@ -10,7 +10,7 @@ LDFLAGS =
 # Makefile settings - Can be customized.
 APPNAME = sparsesolver
 EXT = .cpp
-SRCDIR = /Users/stoic/Documents/sparse
+SRCDIR = /Users/stoic/Documents/sparse-solver
 OBJDIR = obj
 
 ############## Do not change anything from here downwards! #############

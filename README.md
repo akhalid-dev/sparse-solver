@@ -13,9 +13,11 @@ make clean
 Sparse solver requires that the correct build directory be places in the Makefile.
 Run pwd on linux or Mac to find out the current repository:
 ```bash
-pwd
+$ pwd
 ```
-Place the working repository path in the Makefile for <strong>SRCDIR</strong>
+Place the working path (pwd result) in the <strong>Makefile<strong> for <strong>SRCDIR</strong>
+
+
 
 
 
