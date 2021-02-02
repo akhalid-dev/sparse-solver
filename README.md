@@ -6,6 +6,16 @@ To clone the repository:
 ```bash
 git clone https://github.com/akhalid-dev/sparse-solver
 ```
+```bash
+make clean
+```
+
+Sparse solver requires that the correct build directory be places in the Makefile.
+Run pwd on linux or Mac to find out the current repository:
+```bash
+pwd
+```
+Place the working repository path in the Makefile for <strong>SRCDIR</strong>
 
 
 
