@@ -1,2 +1,2 @@
-obj/main.o: /Users/stoic/Documents/sparse/main.cpp \
-  /usr/local/include/omp.h /Users/stoic/Documents/sparse/Reader.h
+obj/main.o: /Users/stoic/Documents/sparse-solver/main.cpp \
+  /usr/local/include/omp.h /Users/stoic/Documents/sparse-solver/Reader.h
