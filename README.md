@@ -16,6 +16,7 @@ Run pwd on linux or Mac to find out the current repository:
 $ pwd
 ```
 Place the working path (pwd result) in the <strong>Makefile<strong> for <strong>SRCDIR</strong>
+
 <strong>Add matrices:</strong>
 The matrices torso1 and TSOPF_RS_b678_c2 can be downloaded from:
 torso1: https://sparse.tamu.edu/Norris/torso1
