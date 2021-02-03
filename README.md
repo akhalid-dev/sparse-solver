@@ -19,7 +19,9 @@ Place the working path (pwd result) in the <strong>Makefile<strong> for <strong>
 
 <strong>Add matrices:</strong>
 The matrices torso1 and TSOPF_RS_b678_c2 can be downloaded from:
+
 torso1: https://sparse.tamu.edu/Norris/torso1
+
 TSOPF_RS_b678_c2: https://sparse.tamu.edu/TSOPF/TSOPF_RS_b678_c2
 
 The downloaded files should be added in the matrices folder and the path set in the main.cpp file. Currently it is set to a dummy matrix used to testing purposes.
