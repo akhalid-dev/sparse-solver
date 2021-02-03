@@ -28,6 +28,7 @@ The downloaded files should be added in the matrices folder and the path set in 
 
 ## API documentation (Doxygen Generated)
 Doxygen generated API: https://akhalid-dev.github.io/sparse-solver/html/index.html
+Reader Class documentation: https://akhalid-dev.github.io/sparse-solver/html/class_reader.html
 
 
 
