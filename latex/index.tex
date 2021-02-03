@@ -1,0 +1,112 @@
+This function is used to test the results of two implmentations
+\begin{DoxyParams}{Parameters}
+{\em A} & The x matrix using the first implementation \\
+\hline
+{\em B} & The x matrix using the second implementation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true \+: The two vectors are equal. 
+
+false \+: The two vectors are not equal.
+\end{DoxyReturn}
+This function implements the naive solver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the matrix dimension \\
+\hline
+{\em L\+\_\+val} & is array of corresponding nonzero values \\
+\hline
+{\em L\+\_\+rows} & is array of row indices \\
+\hline
+{\em L\+\_\+col\+\_\+p} & points to column starts in indices and data \\
+\hline
+{\em x} & the x matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int \+: successful execution
+\end{DoxyReturn}
+This function implements the optimised solver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the matrix dimension \\
+\hline
+{\em L\+\_\+val} & is array of corresponding nonzero values \\
+\hline
+{\em L\+\_\+rows} & is array of row indices \\
+\hline
+{\em L\+\_\+col\+\_\+p} & points to column starts in indices and data \\
+\hline
+{\em x} & the x matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int \+: successful execution
+\end{DoxyReturn}
+This function implements the parallelized solver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the matrix dimension \\
+\hline
+{\em L\+\_\+val} & is array of corresponding nonzero values \\
+\hline
+{\em L\+\_\+rows} & is array of row indices \\
+\hline
+{\em L\+\_\+col\+\_\+p} & points to column starts in indices and data \\
+\hline
+{\em x} & the x matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int \+: successful execution
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item This function implements the optimised and parallelized solver.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the matrix dimension \\
+\hline
+{\em L\+\_\+val} & is array of corresponding nonzero values \\
+\hline
+{\em L\+\_\+rows} & is array of row indices \\
+\hline
+{\em L\+\_\+col\+\_\+p} & points to column starts in indices and data \\
+\hline
+{\em x} & the x matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int \+: successful execution
+\end{DoxyReturn}
+This function can be used to print compression formats i.\+e CSC.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Lx} & is array of corresponding nonzero values \\
+\hline
+{\em Li} & is array of row indices \\
+\hline
+{\em Lp} & points to column starts in indices and data\\
+\hline
+\end{DoxyParams}
+This function is used to test the results of two implmentations
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & The x matrix using the first implementation \\
+\hline
+{\em B} & The x matrix using the second implementation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true \+: The two vectors are equal. 
+
+false \+: The two vectors are not equal. 
+\end{DoxyReturn}

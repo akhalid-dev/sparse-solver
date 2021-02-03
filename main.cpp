@@ -1,5 +1,6 @@
 #include <iostream>
 #include <time.h>
+#include "main.h"
 #include <fstream>
 
 #include <tuple>
@@ -10,13 +11,6 @@
 #include "Reader.h"
 
 using namespace std;
-
-bool check(vector<double> A, vector<double> B);
-void print_format(vector<double>& Lx, vector<int>& Li, vector<int>& Lp);
-int solve_sparse_parallel_optimized(int n, const vector <double> &L_val, const vector <int> &L_rows, const vector <int>  &L_col_p, vector <double> &x);
-int solve_sparse_parallel(int n, const vector <double> &L_val, const vector <int> &L_rows, const vector <int>  &L_col_p, vector <double> &x);
-int solve_sparse_optimized(int n, const vector <double> &L_val, const vector <int> &L_rows, const vector <int>  &L_col_p, vector <double> &x);
-int solve_sparse_naive(int n, const vector <double> &L_val, const vector <int> &L_rows, const vector <int>  &L_col_p, vector <double> &x);
 
 int main()
 {
@@ -64,6 +58,7 @@ int main()
 
 
 /**
+ * 
  * @brief This function implements the naive solver. 
  * 
  * @param n the matrix dimension
@@ -91,6 +86,7 @@ int solve_sparse_naive(int n, const vector <double> &L_val, const vector <int> &
 }
 
 /**
+ * 
  * @brief This function implements the optimised solver. 
  * 
  * @param n the matrix dimension
@@ -121,6 +117,7 @@ int solve_sparse_optimized(int n, const vector <double> &L_val, const vector <in
 }
 
 /**
+ * 
  * @brief This function implements the parallelized solver. 
  * 
  * @param n the matrix dimension
@@ -150,6 +147,7 @@ int solve_sparse_parallel(int n, const vector <double> &L_val, const vector <int
 }
 
 /**
+ * 
  * @brief This function implements the optimised and parallelized solver. 
  * 
  * @param n the matrix dimension
@@ -180,6 +178,7 @@ int solve_sparse_parallel_optimized(int n, const vector <double> &L_val, const v
 }
 
 /**
+ * 
  * @brief This function can be used to print compression formats i.e CSC.
  * 
  * @param Lx is array of corresponding nonzero values
@@ -197,6 +196,7 @@ void print_format(vector<double>& Lx, vector<int>& Li, vector<int>& Lp) {
 }
 
 /**
+ * 
  * @brief This function is used to test the results of two implmentations
  * 
  * @param A The x matrix using the first implementation

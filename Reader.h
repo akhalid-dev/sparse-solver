@@ -67,9 +67,70 @@ class Reader {
         vector<double> data;
         vector<int> indices;
         vector<int> indptr;
-        tuple<vector<double>, vector<int>, vector<int>> values
+        tuple<vector<double>, vector<int>, vector<int>> values;
         
 };
 
 
 #endif
+
+/**
+ * \mainpage
+ * @brief This function is used to test the results of two implmentations
+ * 
+ * @param A The x matrix using the first implementation
+ * @param B The x matrix using the second implementation
+ * @return true : The two vectors are equal.
+ * @return false : The two vectors are not equal.
+
+ * 
+ * @brief This function implements the naive solver. 
+ * 
+ * @param n the matrix dimension
+ * @param L_val is array of corresponding nonzero values
+ * @param L_rows is array of row indices
+ * @param L_col_p points to column starts in indices and data
+ * @param x the x matrix
+ * @return int : successful execution
+ 
+ * @brief This function implements the optimised solver. 
+ * 
+ * @param n the matrix dimension
+ * @param L_val is array of corresponding nonzero values
+ * @param L_rows is array of row indices
+ * @param L_col_p points to column starts in indices and data
+ * @param x the x matrix
+ * @return int : successful execution
+ * 
+ * @brief This function implements the parallelized solver. 
+ * 
+ * @param n the matrix dimension
+ * @param L_val is array of corresponding nonzero values
+ * @param L_rows is array of row indices
+ * @param L_col_p points to column starts in indices and data
+ * @param x the x matrix
+ * @return int : successful execution
+ * 
+ *  * @brief This function implements the optimised and parallelized solver. 
+ * 
+ * @param n the matrix dimension
+ * @param L_val is array of corresponding nonzero values
+ * @param L_rows is array of row indices
+ * @param L_col_p points to column starts in indices and data
+ * @param x the x matrix
+ * @return int : successful execution
+ * 
+ * @brief This function can be used to print compression formats i.e CSC.
+ * 
+ * @param Lx is array of corresponding nonzero values
+ * @param Li is array of row indices
+ * @param Lp points to column starts in indices and data
+ * 
+ * 
+ * @brief This function is used to test the results of two implmentations
+ * 
+ * @param A The x matrix using the first implementation
+ * @param B The x matrix using the second implementation
+ * @return true : The two vectors are equal.
+ * @return false : The two vectors are not equal.
+ */

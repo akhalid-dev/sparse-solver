@@ -62,11 +62,92 @@ $(function() {
 </iframe>
 </div>
 
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
 <div class="title">Sparse Matrix Solver Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p>This function is used to test the results of two implmentations</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>The x matrix using the first implementation </td></tr>
+    <tr><td class="paramname">B</td><td>The x matrix using the second implementation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true : The two vectors are equal. </dd>
+<dd>
+false : The two vectors are not equal.</dd></dl>
+<p>This function implements the naive solver.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>the matrix dimension </td></tr>
+    <tr><td class="paramname">L_val</td><td>is array of corresponding nonzero values </td></tr>
+    <tr><td class="paramname">L_rows</td><td>is array of row indices </td></tr>
+    <tr><td class="paramname">L_col_p</td><td>points to column starts in indices and data </td></tr>
+    <tr><td class="paramname">x</td><td>the x matrix </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int : successful execution</dd></dl>
+<p>This function implements the optimised solver.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>the matrix dimension </td></tr>
+    <tr><td class="paramname">L_val</td><td>is array of corresponding nonzero values </td></tr>
+    <tr><td class="paramname">L_rows</td><td>is array of row indices </td></tr>
+    <tr><td class="paramname">L_col_p</td><td>points to column starts in indices and data </td></tr>
+    <tr><td class="paramname">x</td><td>the x matrix </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int : successful execution</dd></dl>
+<p>This function implements the parallelized solver.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>the matrix dimension </td></tr>
+    <tr><td class="paramname">L_val</td><td>is array of corresponding nonzero values </td></tr>
+    <tr><td class="paramname">L_rows</td><td>is array of row indices </td></tr>
+    <tr><td class="paramname">L_col_p</td><td>points to column starts in indices and data </td></tr>
+    <tr><td class="paramname">x</td><td>the x matrix </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int : successful execution</dd></dl>
+<ul>
+<li>This function implements the optimised and parallelized solver.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>the matrix dimension </td></tr>
+    <tr><td class="paramname">L_val</td><td>is array of corresponding nonzero values </td></tr>
+    <tr><td class="paramname">L_rows</td><td>is array of row indices </td></tr>
+    <tr><td class="paramname">L_col_p</td><td>points to column starts in indices and data </td></tr>
+    <tr><td class="paramname">x</td><td>the x matrix </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int : successful execution</dd></dl>
+<p>This function can be used to print compression formats i.e CSC.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Lx</td><td>is array of corresponding nonzero values </td></tr>
+    <tr><td class="paramname">Li</td><td>is array of row indices </td></tr>
+    <tr><td class="paramname">Lp</td><td>points to column starts in indices and data</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function is used to test the results of two implmentations</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>The x matrix using the first implementation </td></tr>
+    <tr><td class="paramname">B</td><td>The x matrix using the second implementation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true : The two vectors are equal. </dd>
+<dd>
+false : The two vectors are not equal. </dd></dl>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
