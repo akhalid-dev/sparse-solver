@@ -120,8 +120,8 @@ int main()
 {
     // string path_a = "./matrices/TSOPF_RS_b678_c2/TSOPF_RS_b678_c2.mtx";
     // string path_b = "./matrices/b_for_TSOPF_RS_b678_c2_b.mtx";
-    string path_a = "./matrices/torso1/torso1.mtx";
-    string path_b = "./matrices/b_for_torso1.mtx";
+    //string path_a = "./matrices/torso1/torso1.mtx";
+    //string path_b = "./matrices/b_for_torso1.mtx";
     // string path_a = "./matrices/small_A.mtx";
     // string path_b = "./matrices/small_B.mtx";
 
