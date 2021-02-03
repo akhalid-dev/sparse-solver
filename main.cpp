@@ -27,50 +27,52 @@ int main()
     string path_a = "./matrices/small_A.mtx";
     string path_b = "./matrices/small_B.mtx";
 
+
+    //Create a Reader Object
     Reader simple(path_a, Reader::sparse, Reader::CSC);
     auto [Lx, Li, Lp] = simple.read_from_file(path_a, Reader::sparse, Reader::CSC);
 
-    vector<double> matrix_a;
-    vector<double> matrix_b;
-    vector<double> matrix_c;
-    vector<double> matrix_d;
+    //Creating four copies of B vector
+    vector<double> b_1;
+    vector<double> b_2;
+    vector<double> b_3;
+    vector<double> b_4;
 
-    Reader::read_dense_matrix(path_b, matrix_a);
-    Reader::read_dense_matrix(path_b, matrix_b);
-    Reader::read_dense_matrix(path_b, matrix_c);
-    Reader::read_dense_matrix(path_b, matrix_d);
+    Reader::read_dense_matrix(path_b, b_1);
+    Reader::read_dense_matrix(path_b, b_2);
+    Reader::read_dense_matrix(path_b, b_3);
+    Reader::read_dense_matrix(path_b, b_4);
 
-    for(int i = 0; i < matrix_a.size(); i++) {
-        assert (!isnan(matrix_a[i]));
-        assert (!isnan(matrix_b[i]));
-        assert (!isnan(matrix_c[i]));
-        assert (!isnan(matrix_d[i]));
-    }
     clock_t tStart = clock();
 
-    solve_sparse_naive(Lp.size(), Lx, Li, Lp, matrix_a);
-    solve_sparse_optimized(Lp.size(), Lx, Li, Lp, matrix_b);
-    solve_sparse_parallel(Lp.size(), Lx, Li, Lp, matrix_c); 
-    solve_sparse_parallel_optimized(Lp.size(), Lx, Li, Lp, matrix_d);
+    //Solving using each implementation
+    solve_sparse_naive(Lp.size(), Lx, Li, Lp, b_1);
+    solve_sparse_optimized(Lp.size(), Lx, Li, Lp, b_2);
+    solve_sparse_parallel(Lp.size(), Lx, Li, Lp, b_3); 
+    solve_sparse_parallel_optimized(Lp.size(), Lx, Li, Lp, b_4);
 
-    cout << "Test # 1, passing:" << boolalpha << check(matrix_a, matrix_b) << endl; 
-    cout << "Test # 2, passing:" << boolalpha << check(matrix_a, matrix_c) << endl; 
-    cout << "Test # 3, passing:" << boolalpha << check(matrix_a, matrix_d) << endl; 
+    //Printing out test results
+    cout << "Test # 1, passing: " << boolalpha << check(b_1, b_2) << endl; 
+    cout << "Test # 2, passing: " << boolalpha << check(b_1, b_3) << endl; 
+    cout << "Test # 3, passing: " << boolalpha << check(b_1, b_4) << endl; 
 
-    for (int i = 0; i < Lp.size(); i++) {
-        assert (!(isnan(matrix_a[i])));
-        assert (!(isnan(matrix_b[i])));
-        assert (!(isnan(matrix_c[i])));
-        assert (!(isnan(matrix_d[i])));
-    }
-
+    
     printf("Total Time taken: %.7fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC); 
     
     return 0;
 }
 
 
-
+/**
+ * @brief This function implements the naive solver. 
+ * 
+ * @param n the matrix dimension
+ * @param L_val is array of corresponding nonzero values
+ * @param L_rows is array of row indices
+ * @param L_col_p points to column starts in indices and data
+ * @param x the x matrix
+ * @return int : successful execution
+ */
 int solve_sparse_naive(int n, const vector <double> &L_val, const vector <int> &L_rows, const vector <int>  &L_col_p, 
     vector <double> &x){
     cout << "Running naive implementation..." << endl;
@@ -88,6 +90,16 @@ int solve_sparse_naive(int n, const vector <double> &L_val, const vector <int> &
     return 1;
 }
 
+/**
+ * @brief This function implements the optimised solver. 
+ * 
+ * @param n the matrix dimension
+ * @param L_val is array of corresponding nonzero values
+ * @param L_rows is array of row indices
+ * @param L_col_p points to column starts in indices and data
+ * @param x the x matrix
+ * @return int : successful execution
+ */
 int solve_sparse_optimized(int n, const vector <double> &L_val, const vector <int> &L_rows, const vector <int>  &L_col_p, 
     vector <double> &x){
     cout << "Running an optimized implementation..." << endl;
@@ -108,6 +120,16 @@ int solve_sparse_optimized(int n, const vector <double> &L_val, const vector <in
     return 1;
 }
 
+/**
+ * @brief This function implements the parallelized solver. 
+ * 
+ * @param n the matrix dimension
+ * @param L_val is array of corresponding nonzero values
+ * @param L_rows is array of row indices
+ * @param L_col_p points to column starts in indices and data
+ * @param x the x matrix
+ * @return int : successful execution
+ */
 int solve_sparse_parallel(int n, const vector <double> &L_val, const vector <int> &L_rows, const vector <int>  &L_col_p, 
     vector <double> &x){
 
@@ -127,6 +149,16 @@ int solve_sparse_parallel(int n, const vector <double> &L_val, const vector <int
     return 1;
 }
 
+/**
+ * @brief This function implements the optimised and parallelized solver. 
+ * 
+ * @param n the matrix dimension
+ * @param L_val is array of corresponding nonzero values
+ * @param L_rows is array of row indices
+ * @param L_col_p points to column starts in indices and data
+ * @param x the x matrix
+ * @return int : successful execution
+ */
 int solve_sparse_parallel_optimized(int n, const vector <double> &L_val, const vector <int> &L_rows, const vector <int>  &L_col_p, 
     vector <double> &x){
     cout << "Running the parallelized optimized implementation..." << endl;
@@ -147,6 +179,13 @@ int solve_sparse_parallel_optimized(int n, const vector <double> &L_val, const v
     return 1;
 }
 
+/**
+ * @brief This function can be used to print compression formats i.e CSC.
+ * 
+ * @param Lx is array of corresponding nonzero values
+ * @param Li is array of row indices
+ * @param Lp points to column starts in indices and data
+ */
 void print_format(vector<double>& Lx, vector<int>& Li, vector<int>& Lp) {
     for (int i = 0; i < Lx.size(); i++) {
         cout << Lx[i] << " " << Li[i] << endl;
@@ -157,6 +196,14 @@ void print_format(vector<double>& Lx, vector<int>& Li, vector<int>& Lp) {
     }
 }
 
+/**
+ * @brief This function is used to test the results of two implmentations
+ * 
+ * @param A The x matrix using the first implementation
+ * @param B The x matrix using the second implementation
+ * @return true : The two vectors are equal.
+ * @return false : The two vectors are not equal.
+ */
 bool check(vector<double> A, vector<double> B) {
     if (A.size() != B.size()) {
         return false;
