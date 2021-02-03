@@ -10,7 +10,7 @@ git clone https://github.com/akhalid-dev/sparse-solver
 make clean
 ```
 
-Sparse solver requires that the correct build directory be places in the Makefile.
+Sparse solver requires that the correct build directory be placed in the Makefile.
 Run pwd on linux or Mac to find out the current repository:
 ```bash
 $ pwd
