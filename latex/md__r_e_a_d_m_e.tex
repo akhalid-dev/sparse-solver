@@ -1,0 +1,27 @@
+\href{https://github.com/akhalid-dev/sparse-solver}{\texttt{ }} \href{https://github.com/akhalid-dev/sparse-solver}{\texttt{ }}\hypertarget{md__r_e_a_d_m_e_autotoc_md0}{}\doxysubsection{Installation}\label{md__r_e_a_d_m_e_autotoc_md0}
+Run the following commands on the terminal\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/akhalid-\/dev/sparse-\/solver}
+
+\end{DoxyCode}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make clean}
+
+\end{DoxyCode}
+
+
+Sparse solver requires that the correct build directory be places in the Makefile. Run pwd on linux or Mac to find out the current repository\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ pwd}
+
+\end{DoxyCode}
+ Place the working path (pwd result) in the {\bfseries{Makefile{\bfseries{ for {\bfseries{SRCDIR}}}}}}
+
+{\bfseries{{\bfseries{{\bfseries{Add matrices\+:}} The matrices torso1 and TSOPF\+\_\+\+RS\+\_\+b678\+\_\+c2 can be downloaded from\+:}}}}
+
+{\bfseries{{\bfseries{torso1\+: \href{https://sparse.tamu.edu/Norris/torso1}{\texttt{ https\+://sparse.\+tamu.\+edu/\+Norris/torso1}}}}}}
+
+{\bfseries{{\bfseries{TSOPF\+\_\+\+RS\+\_\+b678\+\_\+c2\+: \href{https://sparse.tamu.edu/TSOPF/TSOPF_RS_b678_c2}{\texttt{ https\+://sparse.\+tamu.\+edu/\+TSOPF/\+TSOPF\+\_\+\+RS\+\_\+b678\+\_\+c2}}}}}}
+
+{\bfseries{{\bfseries{The downloaded files should be added in the matrices folder and the path set in the \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}} file. Currently it is set to a dummy matrix used for sanity test. }}}}

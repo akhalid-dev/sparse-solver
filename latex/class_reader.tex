@@ -1,0 +1,320 @@
+\hypertarget{class_reader}{}\doxysection{Reader Class Reference}
+\label{class_reader}\index{Reader@{Reader}}
+
+
+This is a helper class used to read matrices from the file.  
+
+
+
+
+{\ttfamily \#include $<$Reader.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_reader_aebe619748df7954dd902d3387c9c6614}{Type}} \{ \mbox{\hyperlink{class_reader_aebe619748df7954dd902d3387c9c6614a277f91902aef6fb272104db4f3889e76}{sparse}}
+, \mbox{\hyperlink{class_reader_aebe619748df7954dd902d3387c9c6614a92de78c008150f6afa6b76fb5c8cfd04}{dense}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_reader_a2acd805d5f2cf3198ea4287c8be336d6}{Compress}} \{ \mbox{\hyperlink{class_reader_a2acd805d5f2cf3198ea4287c8be336d6acddb18369892d46495aed0bdacad30fb}{CSC}}
+, \mbox{\hyperlink{class_reader_a2acd805d5f2cf3198ea4287c8be336d6a08ea5518c2f19a9a41e16674b9f6ebf1}{CCS}}
+, \mbox{\hyperlink{class_reader_a2acd805d5f2cf3198ea4287c8be336d6abd9eeb9eef31902340aa48bf11c7d5f9}{CSR}}
+, \mbox{\hyperlink{class_reader_a2acd805d5f2cf3198ea4287c8be336d6a20f6c63e76bc0ec2ee7cd710b4b7d8d2}{CRS}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_reader_a41549e236aff59dd3acfacc3bf407a8f}{Reader}} (string path, \mbox{\hyperlink{class_reader_aebe619748df7954dd902d3387c9c6614}{Type}} type, \mbox{\hyperlink{class_reader_a2acd805d5f2cf3198ea4287c8be336d6}{Compress}} compression)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_reader}{Reader}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_reader_a78089542fd27a0ac2df6702fffe8725c}{$\sim$\+Reader}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_reader}{Reader}} object. \end{DoxyCompactList}\item 
+tuple$<$ vector$<$ double $>$, vector$<$ int $>$, vector$<$ int $>$ $>$ \& \mbox{\hyperlink{class_reader_ac886a8c69b8e2eda26b2f2ef91d245be}{read\+\_\+from\+\_\+file}} (string path, \mbox{\hyperlink{class_reader_aebe619748df7954dd902d3387c9c6614}{Type}} type, \mbox{\hyperlink{class_reader_a2acd805d5f2cf3198ea4287c8be336d6}{Compress}} compression)
+\begin{DoxyCompactList}\small\item\em Reads the matrix from the file and stores it based on type. (Used for sprase) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_reader_a29cd672a29d7c168ef7fee958df1f0f8}{read\+\_\+dense\+\_\+matrix}} (string file\+\_\+path, vector$<$ double $>$ \&matrix)
+\begin{DoxyCompactList}\small\item\em Reads the matrix from the file and stores it based on type. (Used for dense) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is a helper class used to read matrices from the file. 
+
+Definition at line 11 of file Reader.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_reader_a2acd805d5f2cf3198ea4287c8be336d6}\label{class_reader_a2acd805d5f2cf3198ea4287c8be336d6}} 
+\index{Reader@{Reader}!Compress@{Compress}}
+\index{Compress@{Compress}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{Compress}{Compress}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_reader_a2acd805d5f2cf3198ea4287c8be336d6}{Reader\+::\+Compress}}}
+
+An enum Compress. The documentation block cannot be put after the enum! \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CSC@{CSC}!Reader@{Reader}}\index{Reader@{Reader}!CSC@{CSC}}}\mbox{\Hypertarget{class_reader_a2acd805d5f2cf3198ea4287c8be336d6acddb18369892d46495aed0bdacad30fb}\label{class_reader_a2acd805d5f2cf3198ea4287c8be336d6acddb18369892d46495aed0bdacad30fb}} 
+CSC&CSC Compression \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CCS@{CCS}!Reader@{Reader}}\index{Reader@{Reader}!CCS@{CCS}}}\mbox{\Hypertarget{class_reader_a2acd805d5f2cf3198ea4287c8be336d6a08ea5518c2f19a9a41e16674b9f6ebf1}\label{class_reader_a2acd805d5f2cf3198ea4287c8be336d6a08ea5518c2f19a9a41e16674b9f6ebf1}} 
+CCS&CCS Compression \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CSR@{CSR}!Reader@{Reader}}\index{Reader@{Reader}!CSR@{CSR}}}\mbox{\Hypertarget{class_reader_a2acd805d5f2cf3198ea4287c8be336d6abd9eeb9eef31902340aa48bf11c7d5f9}\label{class_reader_a2acd805d5f2cf3198ea4287c8be336d6abd9eeb9eef31902340aa48bf11c7d5f9}} 
+CSR&CSR Compression \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CRS@{CRS}!Reader@{Reader}}\index{Reader@{Reader}!CRS@{CRS}}}\mbox{\Hypertarget{class_reader_a2acd805d5f2cf3198ea4287c8be336d6a20f6c63e76bc0ec2ee7cd710b4b7d8d2}\label{class_reader_a2acd805d5f2cf3198ea4287c8be336d6a20f6c63e76bc0ec2ee7cd710b4b7d8d2}} 
+CRS&CRS Compression \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 24 of file Reader.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                       \{}
+\DoxyCodeLine{25             \mbox{\hyperlink{class_reader_a2acd805d5f2cf3198ea4287c8be336d6acddb18369892d46495aed0bdacad30fb}{CSC}}, }
+\DoxyCodeLine{26             \mbox{\hyperlink{class_reader_a2acd805d5f2cf3198ea4287c8be336d6a08ea5518c2f19a9a41e16674b9f6ebf1}{CCS}}, }
+\DoxyCodeLine{27             \mbox{\hyperlink{class_reader_a2acd805d5f2cf3198ea4287c8be336d6abd9eeb9eef31902340aa48bf11c7d5f9}{CSR}}, }
+\DoxyCodeLine{28             \mbox{\hyperlink{class_reader_a2acd805d5f2cf3198ea4287c8be336d6a20f6c63e76bc0ec2ee7cd710b4b7d8d2}{CRS}}  }
+\DoxyCodeLine{29         \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_reader_aebe619748df7954dd902d3387c9c6614}\label{class_reader_aebe619748df7954dd902d3387c9c6614}} 
+\index{Reader@{Reader}!Type@{Type}}
+\index{Type@{Type}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_reader_aebe619748df7954dd902d3387c9c6614}{Reader\+::\+Type}}}
+
+An enum Type. The documentation block cannot be put after the enum! \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sparse@{sparse}!Reader@{Reader}}\index{Reader@{Reader}!sparse@{sparse}}}\mbox{\Hypertarget{class_reader_aebe619748df7954dd902d3387c9c6614a277f91902aef6fb272104db4f3889e76}\label{class_reader_aebe619748df7954dd902d3387c9c6614a277f91902aef6fb272104db4f3889e76}} 
+sparse&Type sparse \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dense@{dense}!Reader@{Reader}}\index{Reader@{Reader}!dense@{dense}}}\mbox{\Hypertarget{class_reader_aebe619748df7954dd902d3387c9c6614a92de78c008150f6afa6b76fb5c8cfd04}\label{class_reader_aebe619748df7954dd902d3387c9c6614a92de78c008150f6afa6b76fb5c8cfd04}} 
+dense&Type dense \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 16 of file Reader.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16                   \{}
+\DoxyCodeLine{17             \mbox{\hyperlink{class_reader_aebe619748df7954dd902d3387c9c6614a277f91902aef6fb272104db4f3889e76}{sparse}}, }
+\DoxyCodeLine{18             \mbox{\hyperlink{class_reader_aebe619748df7954dd902d3387c9c6614a92de78c008150f6afa6b76fb5c8cfd04}{dense}}   }
+\DoxyCodeLine{19         \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_reader_a41549e236aff59dd3acfacc3bf407a8f}\label{class_reader_a41549e236aff59dd3acfacc3bf407a8f}} 
+\index{Reader@{Reader}!Reader@{Reader}}
+\index{Reader@{Reader}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{Reader()}{Reader()}}
+{\footnotesize\ttfamily Reader\+::\+Reader (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{\mbox{\hyperlink{class_reader_aebe619748df7954dd902d3387c9c6614}{Type}}}]{type,  }\item[{\mbox{\hyperlink{class_reader_a2acd805d5f2cf3198ea4287c8be336d6}{Compress}}}]{compression }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_reader}{Reader}} object. 
+
+Construct a new \mbox{\hyperlink{class_reader}{Reader}}\+:\+: \mbox{\hyperlink{class_reader}{Reader}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & is the directory for matrix \\
+\hline
+{\em type} & is the type of object i.\+e sparse/dense \\
+\hline
+{\em compression} & is the compression type of the matrix. i.\+e CSC\\
+\hline
+{\em path} & The path to the matrix file. \\
+\hline
+{\em type} & The type of the format to store i.\+e\+: csc, csr etc. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 94 of file Reader.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{94                                                            \{}
+\DoxyCodeLine{95     \textcolor{comment}{//read\_from\_file(path, type, compression);}}
+\DoxyCodeLine{96 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_reader_a78089542fd27a0ac2df6702fffe8725c}\label{class_reader_a78089542fd27a0ac2df6702fffe8725c}} 
+\index{Reader@{Reader}!````~Reader@{$\sim$Reader}}
+\index{````~Reader@{$\sim$Reader}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{$\sim$Reader()}{~Reader()}}
+{\footnotesize\ttfamily Reader\+::$\sim$\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \mbox{\hyperlink{class_reader}{Reader}} object. 
+
+Destroy the \mbox{\hyperlink{class_reader}{Reader}}\+:\+: \mbox{\hyperlink{class_reader}{Reader}} object. 
+
+Definition at line 103 of file Reader.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{104 \{}
+\DoxyCodeLine{105     data.clear();}
+\DoxyCodeLine{106     indices.clear();}
+\DoxyCodeLine{107     indptr.clear();}
+\DoxyCodeLine{108 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_reader_a29cd672a29d7c168ef7fee958df1f0f8}\label{class_reader_a29cd672a29d7c168ef7fee958df1f0f8}} 
+\index{Reader@{Reader}!read\_dense\_matrix@{read\_dense\_matrix}}
+\index{read\_dense\_matrix@{read\_dense\_matrix}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{read\_dense\_matrix()}{read\_dense\_matrix()}}
+{\footnotesize\ttfamily void Reader\+::read\+\_\+dense\+\_\+matrix (\begin{DoxyParamCaption}\item[{string}]{file\+\_\+path,  }\item[{vector$<$ double $>$ \&}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reads the matrix from the file and stores it based on type. (Used for dense) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+path} & is the directory for matrix \\
+\hline
+{\em matrix} & is the reference for 2D matrix \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 59 of file Reader.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59                                                                       \{}
+\DoxyCodeLine{60     ifstream file(file\_path);}
+\DoxyCodeLine{61     \textcolor{keywordtype}{int} num\_row, num\_col, num\_lines;}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{comment}{// Ignore comments headers}}
+\DoxyCodeLine{64     \textcolor{keywordflow}{while} (file.peek() == \textcolor{charliteral}{'\%'}) file.ignore(2048, \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{65     \textcolor{keywordflow}{if} (file.fail())}
+\DoxyCodeLine{66         cout << \textcolor{stringliteral}{"{}Failed to open"{}} << endl;}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     \textcolor{comment}{// Read number of rows and columns}}
+\DoxyCodeLine{69     file >> num\_row>> num\_col >> num\_lines;}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     \textcolor{comment}{// Create 2D array and fill with zeros }}
+\DoxyCodeLine{72     matrix = vector<double>(num\_row*num\_col, 0.0);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74   }
+\DoxyCodeLine{75     \textcolor{comment}{// fill the matrix with data}}
+\DoxyCodeLine{76     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} l = 0; l < num\_lines; l++)}
+\DoxyCodeLine{77     \{}
+\DoxyCodeLine{78         \textcolor{keywordtype}{double} data;}
+\DoxyCodeLine{79         \textcolor{keywordtype}{int} row, col;}
+\DoxyCodeLine{80         file >> row >> col >> data;}
+\DoxyCodeLine{81         matrix[(row -\/1) + (col -\/1) * num\_row] = data;}
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     file.close();}
+\DoxyCodeLine{85 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_reader_ac886a8c69b8e2eda26b2f2ef91d245be}\label{class_reader_ac886a8c69b8e2eda26b2f2ef91d245be}} 
+\index{Reader@{Reader}!read\_from\_file@{read\_from\_file}}
+\index{read\_from\_file@{read\_from\_file}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{read\_from\_file()}{read\_from\_file()}}
+{\footnotesize\ttfamily tuple$<$ vector$<$ double $>$, vector$<$ int $>$, vector$<$ int $>$ $>$ \& Reader\+::read\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{\mbox{\hyperlink{class_reader_aebe619748df7954dd902d3387c9c6614}{Type}}}]{type,  }\item[{\mbox{\hyperlink{class_reader_a2acd805d5f2cf3198ea4287c8be336d6}{Compress}}}]{compression = {\ttfamily \mbox{\hyperlink{class_reader_a2acd805d5f2cf3198ea4287c8be336d6acddb18369892d46495aed0bdacad30fb}{CSC}}} }\end{DoxyParamCaption})}
+
+
+
+Reads the matrix from the file and stores it based on type. (Used for sprase) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & is the directory for matrix \\
+\hline
+{\em type} & is the type of object i.\+e sparse/dense \\
+\hline
+{\em compression} & is the compression type of the matrix. i.\+e CSC \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tuple$<$vector$<$double$>$, vector$<$int$>$, vector$<$int$>$$>$\&
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to the matrix file. \\
+\hline
+{\em type} & The type of the format\+: d for dense, s for sparse. \\
+\hline
+{\em compression} & The type of the format to store i.\+e\+: csc, csr etc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tuple$<$vector$<$double$>$$\ast$, vector$<$int$>$$\ast$, vector$<$int$>$$\ast$$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file Reader.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                                                                                                                         \{}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{comment}{//Open the path}}
+\DoxyCodeLine{20     ifstream file(path);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keywordflow}{if} (file.fail())\{}
+\DoxyCodeLine{23         \textcolor{keywordflow}{throw} std::runtime\_error(std::string(\textcolor{stringliteral}{"{}Failed to open: "{}}) + path);}
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{comment}{// Declare variables:}}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} M, N, L;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{comment}{// Ignore Comments:}}
+\DoxyCodeLine{30     \textcolor{keywordflow}{while} (file.peek() == \textcolor{charliteral}{'\%'}) file.ignore(2048, \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{31     }
+\DoxyCodeLine{32     file >> M >> N >> L;}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{34     data.resize(L);}
+\DoxyCodeLine{35     indices.resize(L);}
+\DoxyCodeLine{36     indptr.reserve(N);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keywordflow}{if} (type == \mbox{\hyperlink{class_reader_aebe619748df7954dd902d3387c9c6614a277f91902aef6fb272104db4f3889e76}{sparse}}) \{}
+\DoxyCodeLine{39         \textcolor{keywordtype}{int} prev\_col = -\/1;}
+\DoxyCodeLine{40         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < L; i++)}
+\DoxyCodeLine{41             \{}
+\DoxyCodeLine{42                 \textcolor{keywordtype}{int} row, col;}
+\DoxyCodeLine{43                 \textcolor{keywordtype}{double} value;}
+\DoxyCodeLine{44                 file >> row >> col >> value; }
+\DoxyCodeLine{45                 indices[i] = row -\/ 1;}
+\DoxyCodeLine{46                 data[i] = value;}
+\DoxyCodeLine{47                 \textcolor{keywordflow}{if} (col != prev\_col)}
+\DoxyCodeLine{48                     indptr.push\_back(i);}
+\DoxyCodeLine{49                 prev\_col = col;}
+\DoxyCodeLine{50             \}}
+\DoxyCodeLine{51         file.close();}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54             }
+\DoxyCodeLine{55     values = make\_tuple(data, indices, indptr);}
+\DoxyCodeLine{56     \textcolor{keywordflow}{return} values; }
+\DoxyCodeLine{57 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Reader.\+h\item 
+Reader.\+cpp\end{DoxyCompactItemize}
